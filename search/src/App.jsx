@@ -1,23 +1,32 @@
-import { useState } from 'react'
+/** @format */
 
-import './App.css'
+import { useState } from "react";
+
+import "./App.css";
 
 function App() {
-  const [searchValue, setSearchValue] = useState(0)
+  const [searchValue, setSearchValue] = useState("");
 
   const handleInputChange = (e) => {
-    setSearchValue(e.target.value)
-  }
+    setSearchValue(e.target.value);
+  };
+
+  const handleClearClick = () => {
+    setSearchValue("");
+  };
+
+  const shouldDisplayButton = searchValue.length > 0;
 
   return (
     <>
-    <div className='bar-top'>
-      <input type='text' value={searchValue} onChange={handleInputChange}/>
-      <button className='primary'>clear </button>
-    </div>
-      
+      <div className='card'>
+        <div className='container'>
+          <input type='text' placeholder = 'Type Something Here... ' value={searchValue} onChange={handleInputChange} />
+          { shouldDisplayButton && <button onClick={handleClearClick}> clear </button>}
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

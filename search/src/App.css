@@ -1,0 +1,49 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(3, 134, 71, 0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    /* Rounded corners */
+    max-width: 300px;
+    /* Max width for a single card */
+    margin: 20px;
+    background-color: rgb(174, 213, 226);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.container {
+    justify-content: center;
+    padding: 10px;
+}
+
+button{
+    height: 45px;
+    background-color: rgb(127, 255, 159);
+    padding: 5px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+button:hover {
+    color: rgb(255, 0, 106);
+    filter: drop-shadow(0 0 2em #f4063daa);
+}
+
+input {
+
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: aliceblue;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
